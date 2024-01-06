@@ -2,7 +2,7 @@ import string
 import random
 
 # This program generates a random password based on the user's input for the number of letters,
-# symbols, and numbers to be included in the password. Caharacters can not be repeated
+# symbols, and numbers to be included in the password.
 
 lower = string.ascii_lowercase
 upper = string.ascii_uppercase
@@ -18,20 +18,21 @@ num_num = int(input("How many numbers would you like in your password\n"))
 
 password = []
 
-for x in range(num_letter + 1): 
-    passwrd1 = random.sample(alpha_list, x)
-for y in range(num_symbol + 1):
-    passwrd2 = random.sample(symbols, y)
-for z in range(num_num + 1):
-    passwrd3 = random.sample(numbers, z)
+for x in range(1, num_letter + 1): 
+    password.append(random.choice(alpha_list))
+for y in range(1, num_symbol + 1):
+    password.append(random.choice(symbols))
+for z in range(1, num_num + 1):
+    password.append(random.choice(numbers))
 #adds the list from passwod1, passwrd2 and passwrd3 above into a single "password" below
-paswword = password.extend(passwrd1)
-paswword = password.extend(passwrd2)
-paswword = password.extend(passwrd3)
+# paswword = password.extend(passwrd1)
+# paswword = password.extend(passwrd2)
+# paswword = password.extend(passwrd3)
 random.shuffle(password)
-output_password = ''.join(password)
-print(f"Here is your password: {output_password}")
-
+output =""
+for i in password:
+    output += i
+print(output)
 
 
 
