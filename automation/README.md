@@ -1,1 +1,1 @@
-The currency converter program , uses freeconverter API
+The currency converter program , it uses a freeconverter API
