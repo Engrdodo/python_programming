@@ -2,7 +2,7 @@ import string
 import random
 
 # This program generates a random password based on the user's input for the number of letters,
-# symbols, and numbers to be included in the password. Caharacters can not be repeated
+# symbols, and numbers to be included in the password. Characters can not be repeated
 
 lower = string.ascii_lowercase
 upper = string.ascii_uppercase
