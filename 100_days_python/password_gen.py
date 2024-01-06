@@ -16,21 +16,19 @@ num_num = int(input("How many numbers would you like in your password\n"))
 
 password = []
 
-for x in range(num_letter + 1): #and (symb in range(num_symbol + 1)) and (num in range(num_num + 1)):
+for x in range(num_letter + 1): 
     passwrd1 = random.sample(alpha_list, x)
-    #password.ape
 for y in range(num_symbol + 1):
     passwrd2 = random.sample(symbols, y)
 for z in range(num_num + 1):
     passwrd3 = random.sample(numbers, z)
+#adds the list from passwod1, passwrd2 and passwrd3 above into a single "password" below
 paswword = password.extend(passwrd1)
 paswword = password.extend(passwrd2)
 paswword = password.extend(passwrd3)
 random.shuffle(password)
-for items in password:
-    str(items)
-    print(items, end = '')
-print()
+output_password = ''.join(password)
+print(f"Here is your password: {output_password}")
 
 
 
