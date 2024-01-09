@@ -1,10 +1,15 @@
 import random
-word_list = ["baboon", "mouse", "complete"]
+from hangman_words import word_list
+from hangman_art import logo, stages
 
+print(logo)
 chosen_word = random.choice(word_list)
 print(chosen_word)
 display = []
 end_of_game = False
+lives = 6
+for _ in range(word_length):
+    display += "_"
 while not end_of_game:
     guess = input("Guess a letter:\n").lower()
     
