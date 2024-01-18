@@ -1,9 +1,19 @@
 import random
+import os
+
+def clear_screen():
+
+    if os.name == 'nt':
+        os.system('cls')
+    else:
+        os.system('clear')
+
+
 print("Welcome to DaveTech SECRET AUCTION program")
-good = ["Telivision", "Motorcycle", "Generator", "Laptop", "Air Conditioner", "Iphone", "grand piano", "car", "gas cooker"]
+good = ["Television", "Motorcycle", "Generator", "Laptop", "Air Conditioner", "Iphone", "grand piano", "car", "gas cooker"]
 
 items_to_be_sold = random.choice(good)
-print(f"At DaveTech, we are selling our {items_to_be_sold} today to any lucky customer, highest bidder wins...Goodluck")
+print(f"At DaveTech, we are selling our {items_to_be_sold} to any lucky customer today, highest bidder wins...Goodluck")
 bids = {}
 bidding_finished = False
 
@@ -26,4 +36,7 @@ while not bidding_finished:
     if should_continue == "no":
         bidding_finished = True
         find_highest_bidder(bids)
+    else:
+        clear_screen()
+    
     
